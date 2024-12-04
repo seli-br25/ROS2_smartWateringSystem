@@ -14,5 +14,19 @@ def read_adc(channel):
 
 while True:
     value = read_adc(0)  # Read CH0
-    print(f"ADC Value: {value}")  # Should be 0-1023
+    print(f"ADC Value 0: {value}")  # Should be 0-1023
+    value = read_adc(1)  # Read CH0
+    print(f"ADC Value 1: {value}")  # Should be 0-1023
+    value = read_adc(2)  # Read CH0
+    print(f"ADC Value 2: {value}")  # Should be 0-1023
+    value = read_adc(3)  # Read CH0
+    print(f"ADC Value 3: {value}")  # Should be 0-1023
+    value = read_adc(4)  # Read CH0
+    print(f"ADC Value 4: {value}")  # Should be 0-1023
+    value = read_adc(5)  # Read CH0
+    print(f"ADC Value 5: {value}")  # Should be 0-1023
+    value = read_adc(6)  # Read CH0
+    print(f"ADC Value 6: {value}")  # Should be 0-1023
+    value = read_adc(7)  # Read CH0
+    print(f"ADC Value 7: {value}")  # Should be 0-1023
     sleep(1)
