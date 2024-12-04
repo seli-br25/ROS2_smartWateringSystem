@@ -20,7 +20,7 @@ def read_adc(channel):
 try:
     while True:
         value = read_adc(4)  # Kanal 4 (AN-Pin) auslesen
-        print(f"CH4 (AN-Pin) ADC-Wert: {value}")
+        print(f"CH1 (Unten1-Pin) ADC-Wert: {value}")
         sleep(1)
 except KeyboardInterrupt:
     # SPI-Verbindung schließen, wenn das Programm beendet wird
