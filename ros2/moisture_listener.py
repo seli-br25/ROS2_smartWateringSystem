@@ -4,7 +4,7 @@ from std_msgs.msg import String
 import serial
 import RPi.GPIO as GPIO
 
-RELAY_PIN = 17  # GPIO-Pin für das Relais (anpassen!)
+RELAY_PIN = 7
 
 class MoistureController(Node):
     def __init__(self):
@@ -15,10 +15,10 @@ class MoistureController(Node):
             'moisture_status',
             self.listener_callback,
             10)
-        self.serial_port = serial.Serial('/dev/ttyUSB0', 57600, timeout=1)  # Passe den Port an!
+        self.serial_port = serial.Serial('/dev/ttyACM0', 57600, timeout=1) # usb port for arduino
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(RELAY_PIN, GPIO.OUT)
-        GPIO.output(RELAY_PIN, GPIO.LOW)  # Pumpe standardmäßig aus
+        GPIO.output(RELAY_PIN, GPIO.LOW) # deactivate pump
 
     def read_and_publish(self):
         if self.serial_port.in_waiting > 0:
@@ -31,10 +31,10 @@ class MoistureController(Node):
     def listener_callback(self, msg):
         self.get_logger().info(f'Received moisture status: {msg.data}')
         if msg.data == 'dry':
-            GPIO.output(RELAY_PIN, GPIO.HIGH)  # Pumpe einschalten
+            GPIO.output(RELAY_PIN, GPIO.HIGH)  # activate pump
             self.get_logger().info('Pump ON')
         elif msg.data == 'moist':
-            GPIO.output(RELAY_PIN, GPIO.LOW)  # Pumpe ausschalten
+            GPIO.output(RELAY_PIN, GPIO.LOW)  # deactivate pump
             self.get_logger().info('Pump OFF')
 
 def main(args=None):
