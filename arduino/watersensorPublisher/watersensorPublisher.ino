@@ -1,16 +1,23 @@
-#define MOISTURE_PIN A0 
+#define WATERSENSOR_PIN A0
 
 void setup() {
-  pinMode(MOISTURE_PIN, INPUT);
-  Serial.begin(57600);
+  pinMode(WATERSENSOR_PIN, INPUT);
+  Serial.begin(57600); 
 }
 
 void loop() {
-  int moisture = analogRead(MOISTURE_PIN);
-  if (moisture < 50) { 
-    Serial.println("dry");
+  // measure soil moisture
+  int moisture = analogRead(WATERSENSOR_PIN);
+  String status;
+
+  if (moisture < 50) {
+    status = "dry";
   } else {
-    Serial.println("moist");
+    status = "moist";
   }
+
+  // send moisture status over serial
+  Serial.println(status);
+
   delay(1000); 
 }
