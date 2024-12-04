@@ -1,0 +1,90 @@
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+import requests
+from datetime import datetime
+
+class TelegramNode(Node):
+    def __init__(self):
+        super().__init__('telegram_node')
+        self.subscription_moisture = self.create_subscription(
+            String,
+            'soil_moisture',
+            self.moisture_callback,
+            10
+        )
+        self.subscription_status = self.create_subscription(
+            String,
+            'watering_status',
+            self.status_callback,
+            10
+        )
+        self.status_publisher = self.create_publisher(String, 'refilled_command', 10)
+        self.telegram_bot_token = "7737524044:AAEQ7eh4yWiqftx2htiohbbG8WG4VoFNqcs"
+        self.telegram_chat_id = "891348278"
+        self.watering_log = []
+        self.last_watering_time = None
+        self.current_moisture = "Unknown"
+
+    def moisture_callback(self, msg):
+        self.current_moisture = msg.data
+
+    def status_callback(self, msg):
+        message = msg.data
+        if "Pump activated" in message:
+            self.last_watering_time = datetime.now()
+            self.watering_log.append(f"{message} at {self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        elif "Pump deactivated" in message or "check the water reservoir!" in message:
+            self.watering_log.append(message)
+        self.send_telegram_message(message)
+
+    def send_telegram_message(self, text):
+        url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
+        payload = {"chat_id": self.telegram_chat_id, "text": text}
+        response = requests.post(url, json=payload)
+        if response.status_code == 200:
+            self.get_logger().info(f"Message sent: {text}")
+        else:
+            self.get_logger().error(f"Failed to send message: {response.text}")
+
+    def handle_refilled_command(self):
+        self.publish_refilled_command()
+        self.send_telegram_message("System resumed: Soil monitoring is active again.")
+
+    def handle_status_command(self):
+        watering_history = "\n".join(self.watering_log[-5:]) if self.watering_log else "No watering history available."
+        last_watered = self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S') if self.last_watering_time else "Never"
+        message = (
+            f"Plant Status:\n"
+            f"- Current Moisture: {self.current_moisture}\n"
+            f"- Last Watered: {last_watered}\n"
+            f"- Watering History (last 5 events):\n{watering_history}"
+        )
+        self.send_telegram_message(message)
+
+    def publish_refilled_command(self):
+        msg = String()
+        msg.data = "refilled"
+        self.status_publisher.publish(msg)
+        self.get_logger().info("Refilled command sent.")
+
+    def spin_once(self):
+        # Simulate a basic command handler
+        command = input("Enter Telegram command (type /status or /refilled): ")
+        if command == "/status":
+            self.handle_status_command()
+        elif command == "/refilled":
+            self.handle_refilled_command()
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = TelegramNode()
+    try:
+        while rclpy.ok():
+            rclpy.spin_once(node)
+            node.spin_once()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
