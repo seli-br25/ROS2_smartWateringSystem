@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+		'moisture_publisher = smart_watering.moisture_publisher:main',
+		'relay_controller = smart_watering.relay_controller:main',
         ],
     },
 )
