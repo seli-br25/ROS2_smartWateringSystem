@@ -32,11 +32,16 @@ class TelegramNode(Node):
 
     def status_callback(self, msg):
         message = msg.data
+        wasActivated = false
         if "Pump activated" in message:
             self.last_watering_time = datetime.now()
             self.watering_log.append(f"{message} at {self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S')}")
-        elif "Pump deactivated" in message or "check the water reservoir!" in message:
+            wasActivated = true
+        elif "Pump deactivated" in message and wasActivated == true:
             self.watering_log.append(message)
+            wasActivated = false
+        elif "check the water reservoir!" in message:
+			self.watering_log.append(f"{message} \n After that, send the command /checked to resume the watering system")
         self.send_telegram_message(message)
 
     def send_telegram_message(self, text):
@@ -51,7 +56,7 @@ class TelegramNode(Node):
 
     def handle_refilled_command(self):
         self.publish_refilled_command()
-        self.send_telegram_message("System resumed: Soil monitoring is active again.")
+        #self.send_telegram_message("System resumed: Soil monitoring is active again.")
 
     def handle_status_command(self):
         watering_history = "\n".join(self.watering_log[-5:]) if self.watering_log else "No watering history available."
@@ -66,7 +71,7 @@ class TelegramNode(Node):
 
     def publish_refilled_command(self):
         msg = String()
-        msg.data = "refilled"
+        msg.data = "/refilled"
         self.status_publisher.publish(msg)
         self.get_logger().info("Refilled command sent.")
 
@@ -80,7 +85,7 @@ class TelegramNode(Node):
                 message = update.get('message', {}).get('text', '')
                 if message == "/status":
                     self.handle_status_command()
-                elif message == "/refilled":
+                elif message == "/checked":
                     self.handle_refilled_command()
                 else:
                     self.send_telegram_message("This command does not exist!")
