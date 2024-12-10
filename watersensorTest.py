@@ -1,37 +1,31 @@
-import spidev
 import time
-
-def read_channel(spi, channel):
-    # Perform SPI transaction and bit shifting to read from MCP3008
-    adc = spi.xfer2([1, (8 + channel) << 4, 0])
-    data = ((adc[1] & 3) << 8) + adc[2]
-    return data
+from gpiozero import MCP3008
 
 def main():
-    # Setup SPI
-    spi = spidev.SpiDev()
-    spi.open(0, 0)  # Open SPI bus 0, device 0
-    spi.max_speed_hz = 1350000
-
+    # Configure GPIO12 (ADC4)
+    adc = MCP3008(channel=4)  # Channel 4 corresponds to GPIO12 (ADC4)
+    
     try:
         print("Reading water sensor values from GPIO12 (ADC4)...")
         while True:
-            # Read from MCP3008 channel 4 (ADC4)
-            value = read_channel(spi, 4)
+            # Read the raw ADC value
+            value = adc.value  # Returns a value between 0.0 and 1.0
+            scaled_value = int(value * 1023)  # Scale to 0–1023 (10-bit ADC)
+
             # Print the value
-            print(f"Water Sensor Value: {value}")
+            print(f"Water Sensor Raw Value: {scaled_value}")
 
             # Determine status
-            if value < 50:
+            if scaled_value < 50:
                 print("Status: Dry")
             else:
                 print("Status: Moist")
 
-            time.sleep(1)  # Wait for 1 second before next reading
+            time.sleep(1)  # Wait for 1 second
     except KeyboardInterrupt:
         print("Exiting...")
     finally:
-        spi.close()  # Cleanup SPI connection
+        adc.close()  # Cleanup ADC connection
 
 if __name__ == "__main__":
     main()
