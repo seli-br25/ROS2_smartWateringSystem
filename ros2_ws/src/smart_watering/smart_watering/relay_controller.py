@@ -61,6 +61,10 @@ class RelayController(Node):
         self.status_publisher.publish(msg)
         self.get_logger().info(f'Status published: {message}')
 
+    def handle_continue_command(self, msg):
+        if msg.data == "continue":
+            self.reset_paused_state()
+
 def main(args=None):
     rclpy.init(args=args)
     node = RelayController()

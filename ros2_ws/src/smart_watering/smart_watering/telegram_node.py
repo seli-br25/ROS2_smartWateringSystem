@@ -20,28 +20,30 @@ class TelegramNode(Node):
             self.status_callback,
             10
         )
-        self.status_publisher = self.create_publisher(String, 'refilled_command', 10)
+        self.status_publisher = self.create_publisher(String, 'continue_command', 10)
         self.telegram_bot_token = "7737524044:AAEQ7eh4yWiqftx2htiohbbG8WG4VoFNqcs"
         self.telegram_chat_id = "891348278"
         self.watering_log = []
         self.last_watering_time = None
         self.current_moisture = "Unknown"
+        self.wasActivated = False
+
+
 
     def moisture_callback(self, msg):
         self.current_moisture = msg.data
 
     def status_callback(self, msg):
         message = msg.data
-        wasActivated = false
         if "Pump activated" in message:
             self.last_watering_time = datetime.now()
             self.watering_log.append(f"{message} at {self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S')}")
-            wasActivated = true
-        elif "Pump deactivated" in message and wasActivated == true:
+            self.wasActivated = True
+        elif "Pump deactivated" in message and self.wasActivated == True:
             self.watering_log.append(message)
-            wasActivated = false
+            self.wasActivated = False
         elif "check the water reservoir!" in message:
-			self.watering_log.append(f"{message} \n After that, send the command /checked to resume the watering system")
+            self.watering_log.append(f"{message} \n After that, send the command /continue to resume the watering system")
         self.send_telegram_message(message)
 
     def send_telegram_message(self, text):
@@ -54,9 +56,9 @@ class TelegramNode(Node):
                 return
             self.get_logger().error(f"Retrying message send: {response.text}")
 
-    def handle_refilled_command(self):
-        self.publish_refilled_command()
-        #self.send_telegram_message("System resumed: Soil monitoring is active again.")
+    def handle_continue_command(self):
+        self.publish_continue_command()
+        self.send_telegram_message("System resumed: Soil monitoring is active again.")
 
     def handle_status_command(self):
         watering_history = "\n".join(self.watering_log[-5:]) if self.watering_log else "No watering history available."
@@ -69,11 +71,11 @@ class TelegramNode(Node):
         )
         self.send_telegram_message(message)
 
-    def publish_refilled_command(self):
+    def publish_continue_command(self):
         msg = String()
-        msg.data = "/refilled"
+        msg.data = "continue"
         self.status_publisher.publish(msg)
-        self.get_logger().info("Refilled command sent.")
+        self.get_logger().info("Continue command sent.")
 
     def fetch_telegram_updates(self):
         url = f"https://api.telegram.org/bot{self.telegram_bot_token}/getUpdates"
@@ -85,8 +87,8 @@ class TelegramNode(Node):
                 message = update.get('message', {}).get('text', '')
                 if message == "/status":
                     self.handle_status_command()
-                elif message == "/checked":
-                    self.handle_refilled_command()
+                elif message == "/continue":
+                    self.handle_continue_command()
                 else:
                     self.send_telegram_message("This command does not exist!")
         else:
