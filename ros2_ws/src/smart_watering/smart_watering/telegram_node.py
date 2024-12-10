@@ -27,7 +27,7 @@ class TelegramNode(Node):
         self.last_watering_time = None
         self.current_moisture = "Unknown"
         self.wasActivated = False
-        self.last_update_id = None
+        self.last_update_id = 0
 
 
     def moisture_callback(self, msg):
@@ -37,13 +37,15 @@ class TelegramNode(Node):
         message = msg.data
         if "Pump activated" in message:
             self.last_watering_time = datetime.now()
-            self.watering_log.append(f"{message} at {self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S')}")
+            self.watering_log.append(f"{self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S')}: \n {message}")
             self.wasActivated = True
         elif "Pump deactivated" in message and self.wasActivated == True:
-            self.watering_log.append(message)
+            self.watering_log.append(f"{self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S')}: \n {message}")
             self.wasActivated = False
         elif "check the water reservoir!" in message:
-            self.watering_log.append(f"{message} \n After that, send the command /continue to resume the watering system")
+			if self.last_watering_time == None:
+				return
+            self.watering_log.append(f"{self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S')}: \n Water pump was stopped due to possible error")
         self.send_telegram_message(message)
 
     def send_telegram_message(self, text):
@@ -59,6 +61,7 @@ class TelegramNode(Node):
     def handle_continue_command(self):
         self.publish_continue_command()
         self.send_telegram_message("System resumed: Soil monitoring is active again.")
+        self.watering_log.append(f"{self.last_watering_time.strftime('%Y-%m-%d %H:%M:%S')}: \n Water pump was activated again with the continue-command")
 
     def handle_status_command(self):
         watering_history = "\n".join(self.watering_log[-5:]) if self.watering_log else "No watering history available."
