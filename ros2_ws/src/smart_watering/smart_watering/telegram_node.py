@@ -4,6 +4,7 @@ from std_msgs.msg import String
 import requests
 from datetime import datetime
 
+
 class TelegramNode(Node):
     def __init__(self):
         super().__init__('telegram_node')
@@ -39,15 +40,14 @@ class TelegramNode(Node):
         self.send_telegram_message(message)
 
     def send_telegram_message(self, text):
-		url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
-		payload = {"chat_id": self.telegram_chat_id, "text": text}
-		for _ in range(3):  # Retry 3 times if needed
-			response = requests.post(url, json=payload)
-			if response.status_code == 200:
-				self.get_logger().info(f"Message sent: {text}")
-				return
-			self.get_logger().error(f"Retrying message send: {response.text}")
-
+        url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
+        payload = {"chat_id": self.telegram_chat_id, "text": text}
+        for _ in range(3):  # Retry 3 times if needed
+            response = requests.post(url, json=payload)
+            if response.status_code == 200:
+                self.get_logger().info(f"Message sent: {text}")
+                return
+            self.get_logger().error(f"Retrying message send: {response.text}")
 
     def handle_refilled_command(self):
         self.publish_refilled_command()
@@ -71,20 +71,22 @@ class TelegramNode(Node):
         self.get_logger().info("Refilled command sent.")
 
     def fetch_telegram_updates(self):
-		url = f"https://api.telegram.org/bot{self.telegram_bot_token}/getUpdates" 
-		response = requests.get(url)
-        if response.status_code = 200:
+        url = f"https://api.telegram.org/bot{self.telegram_bot_token}/getUpdates"
+        response = requests.get(url)
+
+        if response.status_code == 200:
             updates = response.json().get('result', [])
-			for update in updates:
-				message = update.get('message', {}).get('text', '')
-				if message == "/status":
-					self.handle_status_command()
-				elif message == "/refilled":
-					self.handle_refilled_command()
-				else: 
-					self.send_telegram_message("This command does not exist!")
-		else:
-			self.get_logger().error(f"Failed to fetch updates: {response.text}")
+            for update in updates:
+                message = update.get('message', {}).get('text', '')
+                if message == "/status":
+                    self.handle_status_command()
+                elif message == "/refilled":
+                    self.handle_refilled_command()
+                else:
+                    self.send_telegram_message("This command does not exist!")
+        else:
+            self.get_logger().error(f"Failed to fetch updates: {response.text}")
+
 
 def main(args=None):
     rclpy.init(args=args)
