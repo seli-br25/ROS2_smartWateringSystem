@@ -39,14 +39,14 @@ class TelegramNode(Node):
         self.send_telegram_message(message)
 
     def send_telegram_message(self, text):
-    url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
-    payload = {"chat_id": self.telegram_chat_id, "text": text}
-    for _ in range(3):  # Retry 3 times if needed
-        response = requests.post(url, json=payload)
-        if response.status_code == 200:
-            self.get_logger().info(f"Message sent: {text}")
-            return
-        self.get_logger().error(f"Retrying message send: {response.text}")
+		url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
+		payload = {"chat_id": self.telegram_chat_id, "text": text}
+		for _ in range(3):  # Retry 3 times if needed
+			response = requests.post(url, json=payload)
+			if response.status_code == 200:
+				self.get_logger().info(f"Message sent: {text}")
+				return
+			self.get_logger().error(f"Retrying message send: {response.text}")
 
 
     def handle_refilled_command(self):
