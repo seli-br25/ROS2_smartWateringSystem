@@ -93,8 +93,8 @@ def main(args=None):
     node = TelegramNode()
     try:
         while rclpy.ok():
-            rclpy.spin_once(node)
-            node.spin_once()
+            rclpy.spin_once(node, timeout_sec=0.1)
+            node.fetch_telegram_updates()
     except KeyboardInterrupt:
         pass
     finally:
