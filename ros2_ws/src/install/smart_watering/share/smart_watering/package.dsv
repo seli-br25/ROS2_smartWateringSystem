@@ -1,0 +1,6 @@
+source;share/smart_watering/hook/pythonpath.ps1
+source;share/smart_watering/hook/pythonpath.dsv
+source;share/smart_watering/hook/pythonpath.sh
+source;share/smart_watering/hook/ament_prefix_path.ps1
+source;share/smart_watering/hook/ament_prefix_path.dsv
+source;share/smart_watering/hook/ament_prefix_path.sh

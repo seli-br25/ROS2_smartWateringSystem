@@ -1,0 +1,114 @@
+[1.093s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.094s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffb7d86510>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb7d861e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb7d861e0>>, mixin_verb=('build',))
+[1.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.686s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.687s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.687s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.688s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src'
+[1.688s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.689s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.690s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.691s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.691s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.691s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.025s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.025s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.026s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.027s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.028s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.029s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.029s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.030s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.031s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.032s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.032s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.033s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extensions ['ignore', 'ignore_ament_install']
+[2.034s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extension 'ignore'
+[2.034s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extension 'ignore_ament_install'
+[2.035s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extensions ['colcon_pkg']
+[2.035s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extension 'colcon_pkg'
+[2.035s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extensions ['colcon_meta']
+[2.036s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extension 'colcon_meta'
+[2.036s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extensions ['ros']
+[2.036s] Level 1:colcon.colcon_core.package_identification:_identify(smart_watering) by extension 'ros'
+[2.062s] DEBUG:colcon.colcon_core.package_identification:Package 'smart_watering' with type 'ros.ament_python' and name 'smart_watering'
+[2.062s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.063s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.063s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.063s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.063s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.372s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 285 installed packages in /opt/ros/jazzy
+[2.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.885s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'cmake_args' from command line to 'None'
+[2.886s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'cmake_target' from command line to 'None'
+[2.886s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.886s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'cmake_clean_cache' from command line to 'False'
+[2.886s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'cmake_clean_first' from command line to 'False'
+[2.886s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'cmake_force_configure' from command line to 'False'
+[2.887s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'ament_cmake_args' from command line to 'None'
+[2.887s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'catkin_cmake_args' from command line to 'None'
+[2.887s] Level 5:colcon.colcon_core.verb:set package 'smart_watering' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.887s] DEBUG:colcon.colcon_core.verb:Building package 'smart_watering' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering', 'merge_install': False, 'path': '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering', 'symlink_install': False, 'test_result_base': None}
+[2.888s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.895s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.897s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering' with build type 'ament_python'
+[2.899s] Level 1:colcon.colcon_core.shell:create_environment_hook('smart_watering', 'ament_prefix_path')
+[2.953s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/hook/ament_prefix_path.ps1'
+[2.963s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/hook/ament_prefix_path.dsv'
+[2.968s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/hook/ament_prefix_path.sh'
+[2.975s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.976s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.470s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering'
+[5.472s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.472s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.331s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering': PYTHONPATH=/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/smart_watering build --build-base /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build install --record /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/install.log --single-version-externally-managed install_data
+[19.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering' returned '0': PYTHONPATH=/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/smart_watering build --build-base /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build install --record /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/install.log --single-version-externally-managed install_data
+[19.926s] Level 1:colcon.colcon_core.environment:checking '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering' for CMake module files
+[19.932s] Level 1:colcon.colcon_core.environment:checking '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering' for CMake config files
+[19.939s] Level 1:colcon.colcon_core.environment:checking '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib'
+[19.940s] Level 1:colcon.colcon_core.environment:checking '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/bin'
+[19.941s] Level 1:colcon.colcon_core.environment:checking '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/pkgconfig/smart_watering.pc'
+[19.943s] Level 1:colcon.colcon_core.environment:checking '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages'
+[19.945s] Level 1:colcon.colcon_core.shell:create_environment_hook('smart_watering', 'pythonpath')
+[19.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/hook/pythonpath.ps1'
+[19.950s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/hook/pythonpath.dsv'
+[19.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/hook/pythonpath.sh'
+[19.959s] Level 1:colcon.colcon_core.environment:checking '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/bin'
+[19.959s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(smart_watering)
+[19.961s] INFO:colcon.colcon_core.shell:Creating package script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/package.ps1'
+[19.969s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/package.dsv'
+[19.976s] INFO:colcon.colcon_core.shell:Creating package script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/package.sh'
+[19.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/package.bash'
+[19.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering/package.zsh'
+[19.999s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/colcon-core/packages/smart_watering)
+[20.003s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[20.006s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[20.007s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[20.008s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[20.126s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[20.127s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[20.127s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[20.128s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[20.135s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[20.136s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[20.138s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/local_setup.ps1'
+[20.148s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/_local_setup_util_ps1.py'
+[20.160s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/setup.ps1'
+[20.168s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/local_setup.sh'
+[20.174s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/_local_setup_util_sh.py'
+[20.179s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/setup.sh'
+[20.187s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/local_setup.bash'
+[20.193s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/setup.bash'
+[20.201s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/local_setup.zsh'
+[20.207s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/setup.zsh'

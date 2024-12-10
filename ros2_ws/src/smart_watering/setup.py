@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
 		'moisture_publisher = smart_watering.moisture_publisher:main',
 		'relay_controller = smart_watering.relay_controller:main',
+		'telegram_node = smart_watering.telegram_node:main',
         ],
     },
 )

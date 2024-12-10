@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/smart_watering/smart_watering.egg-info/PKG-INFO
+writing dependency_links to ../../build/smart_watering/smart_watering.egg-info/dependency_links.txt
+writing entry points to ../../build/smart_watering/smart_watering.egg-info/entry_points.txt
+writing requirements to ../../build/smart_watering/smart_watering.egg-info/requires.txt
+writing top-level names to ../../build/smart_watering/smart_watering.egg-info/top_level.txt
+reading manifest file '../../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+writing manifest file '../../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+running build
+running build_py
+copying smart_watering/moisture_publisher.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build/lib/smart_watering
+running install
+running install_lib
+copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build/lib/smart_watering/moisture_publisher.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering
+byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering/moisture_publisher.py to moisture_publisher.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/smart_watering/smart_watering.egg-info to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering-0.0.0-py3.12.egg-info
+running install_scripts
+Installing moisture_publisher script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/smart_watering
+Installing relay_controller script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/smart_watering
+writing list of installed files to '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/install.log'

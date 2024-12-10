@@ -1,0 +1,46 @@
+[10.431s] Invoking command in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering': PYTHONPATH=/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/smart_watering build --build-base /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build install --record /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/install.log --single-version-externally-managed install_data
+[13.558s] running egg_info
+[13.560s] creating ../build/smart_watering/smart_watering.egg-info
+[13.810s] writing ../build/smart_watering/smart_watering.egg-info/PKG-INFO
+[13.812s] writing dependency_links to ../build/smart_watering/smart_watering.egg-info/dependency_links.txt
+[13.814s] writing entry points to ../build/smart_watering/smart_watering.egg-info/entry_points.txt
+[13.816s] writing requirements to ../build/smart_watering/smart_watering.egg-info/requires.txt
+[13.817s] writing top-level names to ../build/smart_watering/smart_watering.egg-info/top_level.txt
+[13.819s] writing manifest file '../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+[14.309s] reading manifest file '../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+[14.316s] writing manifest file '../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+[14.317s] running build
+[14.319s] running build_py
+[14.320s] creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build
+[14.322s] creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib
+[14.323s] creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering
+[14.324s] copying smart_watering/moisture_publisher.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering
+[14.325s] copying smart_watering/relay_controller.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering
+[14.328s] copying smart_watering/__init__.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering
+[14.329s] copying smart_watering/telegram_node.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering
+[14.333s] running install
+[14.398s] running install_lib
+[14.639s] creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering
+[14.641s] copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering/moisture_publisher.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering
+[14.643s] copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering/relay_controller.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering
+[14.645s] copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering/__init__.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering
+[14.647s] copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering/telegram_node.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering
+[14.652s] byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering/moisture_publisher.py to moisture_publisher.cpython-312.pyc
+[14.658s] byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering/relay_controller.py to relay_controller.cpython-312.pyc
+[14.666s] byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering/__init__.py to __init__.cpython-312.pyc
+[14.669s] byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering/telegram_node.py to telegram_node.cpython-312.pyc
+[14.673s] Sorry: TabError: inconsistent use of tabs and spaces in indentation (telegram_node.py, line 72)
+[14.675s] running install_data
+[14.676s] creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/ament_index
+[14.678s] creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/ament_index/resource_index
+[14.679s] creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/ament_index/resource_index/packages
+[14.682s] copying resource/smart_watering -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/ament_index/resource_index/packages
+[14.684s] copying package.xml -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering
+[14.685s] running install_egg_info
+[14.937s] Copying ../build/smart_watering/smart_watering.egg-info to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering-0.0.0-py3.12.egg-info
+[14.949s] running install_scripts
+[16.616s] Installing moisture_publisher script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/smart_watering
+[16.618s] Installing relay_controller script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/smart_watering
+[16.620s] Installing telegram_node script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/smart_watering
+[16.623s] writing list of installed files to '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/install.log'
+[16.976s] Invoked command in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering' returned '0': PYTHONPATH=/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/smart_watering build --build-base /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build install --record /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/install.log --single-version-externally-managed install_data

@@ -1,0 +1,25 @@
+[9.582s] Invoking command in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering': PS1=(venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/smart_watering build --build-base /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build install --record /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/install.log --single-version-externally-managed install_data
+[12.779s] running egg_info
+[13.028s] writing ../../build/smart_watering/smart_watering.egg-info/PKG-INFO
+[13.031s] writing dependency_links to ../../build/smart_watering/smart_watering.egg-info/dependency_links.txt
+[13.033s] writing entry points to ../../build/smart_watering/smart_watering.egg-info/entry_points.txt
+[13.036s] writing requirements to ../../build/smart_watering/smart_watering.egg-info/requires.txt
+[13.038s] writing top-level names to ../../build/smart_watering/smart_watering.egg-info/top_level.txt
+[13.543s] reading manifest file '../../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+[13.551s] writing manifest file '../../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+[13.552s] running build
+[13.553s] running build_py
+[13.555s] copying smart_watering/moisture_publisher.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build/lib/smart_watering
+[13.560s] running install
+[13.625s] running install_lib
+[13.875s] copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build/lib/smart_watering/moisture_publisher.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering
+[13.882s] byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering/moisture_publisher.py to moisture_publisher.cpython-312.pyc
+[13.889s] running install_data
+[13.890s] running install_egg_info
+[14.144s] removing '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering-0.0.0-py3.12.egg-info' (and everything under it)
+[14.148s] Copying ../../build/smart_watering/smart_watering.egg-info to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering-0.0.0-py3.12.egg-info
+[14.160s] running install_scripts
+[15.845s] Installing moisture_publisher script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/smart_watering
+[15.847s] Installing relay_controller script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/smart_watering
+[15.851s] writing list of installed files to '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/install.log'
+[16.212s] Invoked command in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering' returned '0': PS1=(venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/smart_watering build --build-base /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build install --record /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/install.log --single-version-externally-managed install_data

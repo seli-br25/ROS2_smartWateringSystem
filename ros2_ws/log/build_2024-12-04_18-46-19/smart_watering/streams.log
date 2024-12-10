@@ -1,0 +1,28 @@
+[10.103s] Invoking command in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering': PS1=(venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/smart_watering build --build-base /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build install --record /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/install.log --single-version-externally-managed install_data
+[13.243s] running egg_info
+[13.501s] writing ../../build/smart_watering/smart_watering.egg-info/PKG-INFO
+[13.504s] writing dependency_links to ../../build/smart_watering/smart_watering.egg-info/dependency_links.txt
+[13.506s] writing entry points to ../../build/smart_watering/smart_watering.egg-info/entry_points.txt
+[13.508s] writing requirements to ../../build/smart_watering/smart_watering.egg-info/requires.txt
+[13.510s] writing top-level names to ../../build/smart_watering/smart_watering.egg-info/top_level.txt
+[14.018s] reading manifest file '../../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+[14.026s] writing manifest file '../../build/smart_watering/smart_watering.egg-info/SOURCES.txt'
+[14.028s] running build
+[14.029s] running build_py
+[14.031s] copying smart_watering/relay_controller.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build/lib/smart_watering
+[14.034s] copying smart_watering/telegram_node.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build/lib/smart_watering
+[14.036s] running install
+[14.102s] running install_lib
+[14.354s] copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build/lib/smart_watering/relay_controller.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering
+[14.357s] copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build/lib/smart_watering/telegram_node.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering
+[14.363s] byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering/relay_controller.py to relay_controller.cpython-312.pyc
+[14.376s] byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering/telegram_node.py to telegram_node.cpython-312.pyc
+[14.386s] running install_data
+[14.387s] running install_egg_info
+[14.648s] removing '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering-0.0.0-py3.12.egg-info' (and everything under it)
+[14.652s] Copying ../../build/smart_watering/smart_watering.egg-info to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages/smart_watering-0.0.0-py3.12.egg-info
+[14.666s] running install_scripts
+[16.393s] Installing moisture_publisher script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/smart_watering
+[16.397s] Installing relay_controller script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/smart_watering
+[16.402s] writing list of installed files to '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/install.log'
+[16.762s] Invoked command in '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering' returned '0': PS1=(venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/install/smart_watering/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/smart_watering build --build-base /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/build install --record /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/build/smart_watering/install.log --single-version-externally-managed install_data

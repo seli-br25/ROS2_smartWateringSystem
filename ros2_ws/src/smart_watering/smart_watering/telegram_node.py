@@ -68,13 +68,21 @@ class TelegramNode(Node):
         self.status_publisher.publish(msg)
         self.get_logger().info("Refilled command sent.")
 
-    def spin_once(self):
-        # Simulate a basic command handler
-        command = input("Enter Telegram command (type /status or /refilled): ")
-        if command == "/status":
-            self.handle_status_command()
-        elif command == "/refilled":
-            self.handle_refilled_command()
+    def fetch_telegram_updates(self):
+		url = f"https://api.telegram.org/bot{self.telegram_bot_token}/getUpdates" 
+		response = requests.get(url)
+        if response.status_code = 200:
+			updates = response.json().get('result', [])
+			for update in updates:
+				message = update.get('message', {}).get('text', '')
+				if message == "/status":
+					self.handle_status_command()
+				elif message == "/refilled":
+					self.handle_refilled_command()
+				else: 
+					self.send_telegram_message("This command does not exist!")
+		else:
+			self.get_logger().error(f"Failed to fetch updates: {response.text}")
 
 def main(args=None):
     rclpy.init(args=args)

@@ -1,0 +1,220 @@
+[0.000000] (-) TimerEvent: {}
+[0.002008] (smart_watering) JobQueued: {'identifier': 'smart_watering', 'dependencies': OrderedDict()}
+[0.004286] (smart_watering) JobStarted: {'identifier': 'smart_watering'}
+[0.098245] (-) TimerEvent: {}
+[0.199588] (-) TimerEvent: {}
+[0.300879] (-) TimerEvent: {}
+[0.403234] (-) TimerEvent: {}
+[0.504622] (-) TimerEvent: {}
+[0.605917] (-) TimerEvent: {}
+[0.707170] (-) TimerEvent: {}
+[0.808396] (-) TimerEvent: {}
+[0.909571] (-) TimerEvent: {}
+[1.010767] (-) TimerEvent: {}
+[1.111966] (-) TimerEvent: {}
+[1.213146] (-) TimerEvent: {}
+[1.314283] (-) TimerEvent: {}
+[1.415471] (-) TimerEvent: {}
+[1.516675] (-) TimerEvent: {}
+[1.617875] (-) TimerEvent: {}
+[1.718891] (-) TimerEvent: {}
+[1.819968] (-) TimerEvent: {}
+[1.921131] (-) TimerEvent: {}
+[2.022407] (-) TimerEvent: {}
+[2.123586] (-) TimerEvent: {}
+[2.224856] (-) TimerEvent: {}
+[2.326039] (-) TimerEvent: {}
+[2.427411] (-) TimerEvent: {}
+[2.528912] (-) TimerEvent: {}
+[2.630161] (-) TimerEvent: {}
+[2.733232] (-) TimerEvent: {}
+[2.834460] (-) TimerEvent: {}
+[2.935585] (-) TimerEvent: {}
+[3.036874] (-) TimerEvent: {}
+[3.137936] (-) TimerEvent: {}
+[3.239037] (-) TimerEvent: {}
+[3.340489] (-) TimerEvent: {}
+[3.441697] (-) TimerEvent: {}
+[3.542874] (-) TimerEvent: {}
+[3.643997] (-) TimerEvent: {}
+[3.745272] (-) TimerEvent: {}
+[3.846539] (-) TimerEvent: {}
+[3.947694] (-) TimerEvent: {}
+[4.048868] (-) TimerEvent: {}
+[4.149980] (-) TimerEvent: {}
+[4.251140] (-) TimerEvent: {}
+[4.352261] (-) TimerEvent: {}
+[4.453407] (-) TimerEvent: {}
+[4.554618] (-) TimerEvent: {}
+[4.655938] (-) TimerEvent: {}
+[4.757052] (-) TimerEvent: {}
+[4.858265] (-) TimerEvent: {}
+[4.959479] (-) TimerEvent: {}
+[5.060827] (-) TimerEvent: {}
+[5.162147] (-) TimerEvent: {}
+[5.263495] (-) TimerEvent: {}
+[5.364887] (-) TimerEvent: {}
+[5.466128] (-) TimerEvent: {}
+[5.567493] (-) TimerEvent: {}
+[5.668667] (-) TimerEvent: {}
+[5.769967] (-) TimerEvent: {}
+[5.871279] (-) TimerEvent: {}
+[5.972643] (-) TimerEvent: {}
+[6.073909] (-) TimerEvent: {}
+[6.174958] (-) TimerEvent: {}
+[6.276098] (-) TimerEvent: {}
+[6.377316] (-) TimerEvent: {}
+[6.478600] (-) TimerEvent: {}
+[6.579852] (-) TimerEvent: {}
+[6.680985] (-) TimerEvent: {}
+[6.782136] (-) TimerEvent: {}
+[6.883315] (-) TimerEvent: {}
+[6.984529] (-) TimerEvent: {}
+[7.085635] (-) TimerEvent: {}
+[7.186988] (-) TimerEvent: {}
+[7.288533] (-) TimerEvent: {}
+[7.390240] (-) TimerEvent: {}
+[7.491490] (-) TimerEvent: {}
+[7.592688] (-) TimerEvent: {}
+[7.693889] (-) TimerEvent: {}
+[7.794936] (-) TimerEvent: {}
+[7.896119] (-) TimerEvent: {}
+[7.997361] (-) TimerEvent: {}
+[8.098579] (-) TimerEvent: {}
+[8.199872] (-) TimerEvent: {}
+[8.300946] (-) TimerEvent: {}
+[8.401912] (-) TimerEvent: {}
+[8.503163] (-) TimerEvent: {}
+[8.604403] (-) TimerEvent: {}
+[8.705615] (-) TimerEvent: {}
+[8.806917] (-) TimerEvent: {}
+[8.908030] (-) TimerEvent: {}
+[9.009296] (-) TimerEvent: {}
+[9.110471] (-) TimerEvent: {}
+[9.211645] (-) TimerEvent: {}
+[9.312905] (-) TimerEvent: {}
+[9.413975] (-) TimerEvent: {}
+[9.515204] (-) TimerEvent: {}
+[9.616441] (-) TimerEvent: {}
+[9.717836] (-) TimerEvent: {}
+[9.818885] (-) TimerEvent: {}
+[9.919996] (-) TimerEvent: {}
+[10.021239] (-) TimerEvent: {}
+[10.122650] (-) TimerEvent: {}
+[10.224071] (-) TimerEvent: {}
+[10.325462] (-) TimerEvent: {}
+[10.427835] (smart_watering) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/smart_watering', 'build', '--build-base', '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build', 'install', '--record', '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/smart_watering', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'MAIL': '/var/mail/selinabreuer', 'USER': 'selinabreuer', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '1368', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/selinabreuer', 'OLDPWD': '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws', 'HUSHLOGIN': 'FALSE', 'ROS_PYTHON_VERSION': '3', 'SYSTEMD_EXEC_PID': '975', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'selinabreuer', 'WINDOWID': '6291785', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/system.slice/system-getty.slice/getty@tty1.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'WINDOWPATH': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'INVOCATION_ID': 'c75fa9ae57dd429eaeac4940221f12cb', 'CREDENTIALS_DIRECTORY': '/run/credentials/getty@tty1.service', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XAUTHORITY': '/home/selinabreuer/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/tmp/ssh-2xd1PROOUNzt/agent.1333', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'XDG_VTNR': '1', 'PWD': '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering', 'LC_ALL': 'en_US.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[10.438246] (-) TimerEvent: {}
+[10.539389] (-) TimerEvent: {}
+[10.640839] (-) TimerEvent: {}
+[10.742058] (-) TimerEvent: {}
+[10.843215] (-) TimerEvent: {}
+[10.944479] (-) TimerEvent: {}
+[11.045939] (-) TimerEvent: {}
+[11.147111] (-) TimerEvent: {}
+[11.248372] (-) TimerEvent: {}
+[11.349565] (-) TimerEvent: {}
+[11.450875] (-) TimerEvent: {}
+[11.551952] (-) TimerEvent: {}
+[11.652979] (-) TimerEvent: {}
+[11.754114] (-) TimerEvent: {}
+[11.855334] (-) TimerEvent: {}
+[11.956560] (-) TimerEvent: {}
+[12.057836] (-) TimerEvent: {}
+[12.158964] (-) TimerEvent: {}
+[12.260151] (-) TimerEvent: {}
+[12.361325] (-) TimerEvent: {}
+[12.462667] (-) TimerEvent: {}
+[12.563905] (-) TimerEvent: {}
+[12.664944] (-) TimerEvent: {}
+[12.766029] (-) TimerEvent: {}
+[12.867190] (-) TimerEvent: {}
+[12.968376] (-) TimerEvent: {}
+[13.069554] (-) TimerEvent: {}
+[13.170888] (-) TimerEvent: {}
+[13.271968] (-) TimerEvent: {}
+[13.373131] (-) TimerEvent: {}
+[13.474309] (-) TimerEvent: {}
+[13.550466] (smart_watering) StdoutLine: {'line': b'running egg_info\n'}
+[13.564334] (smart_watering) StdoutLine: {'line': b'creating ../build/smart_watering/smart_watering.egg-info\n'}
+[13.574664] (-) TimerEvent: {}
+[13.676175] (-) TimerEvent: {}
+[13.777381] (-) TimerEvent: {}
+[13.814448] (smart_watering) StdoutLine: {'line': b'writing ../build/smart_watering/smart_watering.egg-info/PKG-INFO\n'}
+[13.817207] (smart_watering) StdoutLine: {'line': b'writing dependency_links to ../build/smart_watering/smart_watering.egg-info/dependency_links.txt\n'}
+[13.819162] (smart_watering) StdoutLine: {'line': b'writing entry points to ../build/smart_watering/smart_watering.egg-info/entry_points.txt\n'}
+[13.820820] (smart_watering) StdoutLine: {'line': b'writing requirements to ../build/smart_watering/smart_watering.egg-info/requires.txt\n'}
+[13.822233] (smart_watering) StdoutLine: {'line': b'writing top-level names to ../build/smart_watering/smart_watering.egg-info/top_level.txt\n'}
+[13.823831] (smart_watering) StdoutLine: {'line': b"writing manifest file '../build/smart_watering/smart_watering.egg-info/SOURCES.txt'\n"}
+[13.877656] (-) TimerEvent: {}
+[13.978899] (-) TimerEvent: {}
+[14.079975] (-) TimerEvent: {}
+[14.181219] (-) TimerEvent: {}
+[14.282443] (-) TimerEvent: {}
+[14.314073] (smart_watering) StdoutLine: {'line': b"reading manifest file '../build/smart_watering/smart_watering.egg-info/SOURCES.txt'\n"}
+[14.320427] (smart_watering) StdoutLine: {'line': b"writing manifest file '../build/smart_watering/smart_watering.egg-info/SOURCES.txt'\n"}
+[14.322121] (smart_watering) StdoutLine: {'line': b'running build\n'}
+[14.323581] (smart_watering) StdoutLine: {'line': b'running build_py\n'}
+[14.324969] (smart_watering) StdoutLine: {'line': b'creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build\n'}
+[14.326435] (smart_watering) StdoutLine: {'line': b'creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib\n'}
+[14.327688] (smart_watering) StdoutLine: {'line': b'creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering\n'}
+[14.329129] (smart_watering) StdoutLine: {'line': b'copying smart_watering/moisture_publisher.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering\n'}
+[14.330418] (smart_watering) StdoutLine: {'line': b'copying smart_watering/relay_controller.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering\n'}
+[14.332582] (smart_watering) StdoutLine: {'line': b'copying smart_watering/__init__.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering\n'}
+[14.334402] (smart_watering) StdoutLine: {'line': b'copying smart_watering/telegram_node.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering\n'}
+[14.338250] (smart_watering) StdoutLine: {'line': b'running install\n'}
+[14.382804] (-) TimerEvent: {}
+[14.403021] (smart_watering) StdoutLine: {'line': b'running install_lib\n'}
+[14.482983] (-) TimerEvent: {}
+[14.584184] (-) TimerEvent: {}
+[14.644216] (smart_watering) StdoutLine: {'line': b'creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering\n'}
+[14.645799] (smart_watering) StdoutLine: {'line': b'copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering/moisture_publisher.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering\n'}
+[14.647849] (smart_watering) StdoutLine: {'line': b'copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering/relay_controller.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering\n'}
+[14.649913] (smart_watering) StdoutLine: {'line': b'copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering/__init__.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering\n'}
+[14.651787] (smart_watering) StdoutLine: {'line': b'copying /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/build/lib/smart_watering/telegram_node.py -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering\n'}
+[14.657242] (smart_watering) StdoutLine: {'line': b'byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering/moisture_publisher.py to moisture_publisher.cpython-312.pyc\n'}
+[14.662761] (smart_watering) StdoutLine: {'line': b'byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering/relay_controller.py to relay_controller.cpython-312.pyc\n'}
+[14.670655] (smart_watering) StdoutLine: {'line': b'byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering/__init__.py to __init__.cpython-312.pyc\n'}
+[14.673479] (smart_watering) StdoutLine: {'line': b'byte-compiling /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering/telegram_node.py to telegram_node.cpython-312.pyc\n'}
+[14.677640] (smart_watering) StderrLine: {'line': b'Sorry: TabError: inconsistent use of tabs and spaces in indentation (telegram_node.py, line 72)\n'}
+[14.679397] (smart_watering) StdoutLine: {'line': b'running install_data\n'}
+[14.681063] (smart_watering) StdoutLine: {'line': b'creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/ament_index\n'}
+[14.682499] (smart_watering) StdoutLine: {'line': b'creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/ament_index/resource_index\n'}
+[14.684019] (smart_watering) StdoutLine: {'line': b'creating /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/ament_index/resource_index/packages\n'}
+[14.685193] (-) TimerEvent: {}
+[14.685969] (smart_watering) StdoutLine: {'line': b'copying resource/smart_watering -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/ament_index/resource_index/packages\n'}
+[14.687933] (smart_watering) StdoutLine: {'line': b'copying package.xml -> /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/share/smart_watering\n'}
+[14.689831] (smart_watering) StdoutLine: {'line': b'running install_egg_info\n'}
+[14.785442] (-) TimerEvent: {}
+[14.886613] (-) TimerEvent: {}
+[14.942188] (smart_watering) StdoutLine: {'line': b'Copying ../build/smart_watering/smart_watering.egg-info to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/python3.12/site-packages/smart_watering-0.0.0-py3.12.egg-info\n'}
+[14.954347] (smart_watering) StdoutLine: {'line': b'running install_scripts\n'}
+[14.986913] (-) TimerEvent: {}
+[15.088137] (-) TimerEvent: {}
+[15.189286] (-) TimerEvent: {}
+[15.290515] (-) TimerEvent: {}
+[15.391796] (-) TimerEvent: {}
+[15.492944] (-) TimerEvent: {}
+[15.594119] (-) TimerEvent: {}
+[15.695356] (-) TimerEvent: {}
+[15.796569] (-) TimerEvent: {}
+[15.897796] (-) TimerEvent: {}
+[15.998942] (-) TimerEvent: {}
+[16.100094] (-) TimerEvent: {}
+[16.201314] (-) TimerEvent: {}
+[16.302473] (-) TimerEvent: {}
+[16.403954] (-) TimerEvent: {}
+[16.505059] (-) TimerEvent: {}
+[16.606209] (-) TimerEvent: {}
+[16.620476] (smart_watering) StdoutLine: {'line': b'Installing moisture_publisher script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/smart_watering\n'}
+[16.622679] (smart_watering) StdoutLine: {'line': b'Installing relay_controller script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/smart_watering\n'}
+[16.624424] (smart_watering) StdoutLine: {'line': b'Installing telegram_node script to /home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/install/smart_watering/lib/smart_watering\n'}
+[16.628036] (smart_watering) StdoutLine: {'line': b"writing list of installed files to '/home/selinabreuer/ROS2_smartWateringSystem/ros2_ws/src/build/smart_watering/install.log'\n"}
+[16.706700] (-) TimerEvent: {}
+[16.808148] (-) TimerEvent: {}
+[16.909531] (-) TimerEvent: {}
+[16.980567] (smart_watering) CommandEnded: {'returncode': 0}
+[17.009858] (-) TimerEvent: {}
+[17.108077] (smart_watering) JobEnded: {'identifier': 'smart_watering', 'rc': 0}
+[17.116549] (-) TimerEvent: {}
+[17.117555] (-) EventReactorShutdown: {}
