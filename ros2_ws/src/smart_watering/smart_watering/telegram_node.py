@@ -27,7 +27,7 @@ class TelegramNode(Node):
         self.last_watering_time = None
         self.current_moisture = "Unknown"
         self.wasActivated = False
-
+        self.last_update_id = None
 
 
     def moisture_callback(self, msg):
@@ -79,18 +79,26 @@ class TelegramNode(Node):
 
     def fetch_telegram_updates(self):
         url = f"https://api.telegram.org/bot{self.telegram_bot_token}/getUpdates"
-        response = requests.get(url)
+        params = {}
+        if hasattr(self, 'last_update_id'):
+            # Fetch only updates with IDs greater than the last processed update
+            params['offset'] = self.last_update_id + 1
+
+        response = requests.get(url, params=params)
 
         if response.status_code == 200:
             updates = response.json().get('result', [])
             for update in updates:
                 message = update.get('message', {}).get('text', '')
+                update_id = update.get('update_id', 0)
+
+                # Update last_update_id to the current update ID
+                self.last_update_id = update_id
+
                 if message == "/status":
                     self.handle_status_command()
                 elif message == "/continue":
                     self.handle_continue_command()
-                else:
-                    self.send_telegram_message("This command does not exist!")
         else:
             self.get_logger().error(f"Failed to fetch updates: {response.text}")
 
