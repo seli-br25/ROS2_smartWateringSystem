@@ -13,6 +13,12 @@ class RelayController(Node):
             self.control_relay,
             10
         )
+        self.command_subscription = self.create_subscription(  # Listen to the continue_command topic
+            String,
+            'continue_command',
+            self.handle_continue_command,
+            10
+        )
         self.status_publisher = self.create_publisher(String, 'watering_status', 10)
         self.relay = OutputDevice(27, active_high=True, initial_value=False)  # GPIO27
         self.pump_active = False
