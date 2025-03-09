@@ -21,8 +21,8 @@ class TelegramNode(Node):
             10
         )
         self.status_publisher = self.create_publisher(String, 'continue_command', 10)
-        self.telegram_bot_token = "7737524044:AAEQ7eh4yWiqftx2htiohbbG8WG4VoFNqcs"
-        self.telegram_chat_id = "891348278"
+        self.telegram_bot_token = ""
+        self.telegram_chat_id = ""
         self.watering_log = []
         self.last_watering_time = None
         self.current_moisture = "Unknown"
